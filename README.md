@@ -26,6 +26,13 @@ Eight modern weapons are registered with D&D 5e and linked to items in this modu
 - Semiautomatic pistol
 - Shotgun
 
+### Inventor class
+The module adds the **Inventor** class (class identifier `inventor`) and its supporting content.
+
+- **Class features** are provided in the Items compendium, including the Inventor's Schematics feature described below. Schematics are granted through D&D 5e advancement, so they work like any other class feature.
+- **Spell list:** an Inventor spell list is registered with D&D 5e (see Spell lists below), so Inventor spells show up in the Compendium Browser and spell selection.
+- **Reference journal:** Inventor rules and tables are included in the module's journals.
+
 ### Inventor's Schematics
 An automated way to turn a magic item into a schematic an Inventor can build.
 
