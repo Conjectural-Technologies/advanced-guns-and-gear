@@ -1,8 +1,0 @@
-2026/11/03-01:03:32.637027 7f672bfff6c0 Recovering log #48
-2026/11/03-01:03:32.924178 7f672bfff6c0 Delete type=3 #46
-2026/11/03-01:03:32.924246 7f672bfff6c0 Delete type=0 #48
-2026/11/03-01:28:36.837012 7f67293af6c0 Level-0 table #53: started
-2026/11/03-01:28:36.837043 7f67293af6c0 Level-0 table #53: 0 bytes OK
-2026/11/03-01:28:36.980615 7f67293af6c0 Delete type=0 #51
-2026/11/03-01:28:37.102414 7f67293af6c0 Manual compaction at level-0 from '!folders!dnd9thLevelXXXXX' @ 72057594037927935 : 1 .. '!items.effects!gngWitchBoltXXXX.gngSustainedLigh' @ 0 : 0; will stop at (end)
-2026/11/03-01:28:37.102468 7f67293af6c0 Manual compaction at level-1 from '!folders!dnd9thLevelXXXXX' @ 72057594037927935 : 1 .. '!items.effects!gngWitchBoltXXXX.gngSustainedLigh' @ 0 : 0; will stop at (end)

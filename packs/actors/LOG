@@ -1,8 +1,0 @@
-2026/11/03-01:29:20.803845 7f672bfff6c0 Recovering log #51
-2026/11/03-01:29:21.374407 7f672bfff6c0 Delete type=3 #49
-2026/11/03-01:29:21.374502 7f672bfff6c0 Delete type=0 #51
-2026/11/03-05:08:34.705286 7f67293af6c0 Level-0 table #56: started
-2026/11/03-05:08:34.705321 7f67293af6c0 Level-0 table #56: 0 bytes OK
-2026/11/03-05:08:34.757009 7f67293af6c0 Delete type=0 #54
-2026/11/03-05:08:34.859678 7f67293af6c0 Manual compaction at level-0 from '!actors!dndLightXXXXXXXX' @ 72057594037927935 : 1 .. '!folders!gngWaterVehicles' @ 0 : 0; will stop at (end)
-2026/11/03-05:08:34.914991 7f67293af6c0 Manual compaction at level-1 from '!actors!dndLightXXXXXXXX' @ 72057594037927935 : 1 .. '!folders!gngWaterVehicles' @ 0 : 0; will stop at (end)
