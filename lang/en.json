@@ -1,0 +1,27 @@
+{
+  "AGG": {
+    "InventorSchematic": {
+      "Create": "Create Inventor's Schematic",
+      "Hint": "Select a {description} that this schematic will create.",
+      "Warning": {
+        "Cursed": "Inventor's Schematics cannot be created from cursed magic items.",
+        "Permissions": "Must have an assigned character or permission to create items in the sidebar to create Inventor's Schematics.",
+        "Physical": "Inventor's Schematics can only be created for physical items.",
+        "Rarity": "Inventor's Schematics can only be created from magic items of common, uncommon, or rare rarity.",
+        "Wondrous": "Inventor's Schematics can only be created from Wondrous items."
+      },
+      "Success": "\"{item}\" Inventor's Schematic added to \"{actor}\""
+    },
+    "Feature": {
+      "Class": {
+        "InventorSchematic": "Inventor's Schematic"
+      }
+    },
+    "SETTING": {
+      "VERSION": {
+        "name": "Last Version",
+        "hint": "The last version checked against to determine whether to show the changelog."
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+2026/11/03-01:03:32.933050 7f67413fe6c0 Recovering log #44
+2026/11/03-01:03:33.231970 7f67413fe6c0 Delete type=3 #42
+2026/11/03-01:03:33.232067 7f67413fe6c0 Delete type=0 #44
+2026/11/03-01:28:37.036086 7f67293af6c0 Level-0 table #49: started
+2026/11/03-01:28:37.036118 7f67293af6c0 Level-0 table #49: 0 bytes OK
+2026/11/03-01:28:37.102250 7f67293af6c0 Delete type=0 #47
+2026/11/03-01:28:37.102448 7f67293af6c0 Manual compaction at level-0 from '!folders!dndAdvancedDunge' @ 72057594037927935 : 1 .. '!journal.pages!gngSpellListsXXX.gngReanimatorXX3' @ 0 : 0; will stop at (end)
+2026/11/03-01:28:37.102489 7f67293af6c0 Manual compaction at level-1 from '!folders!dndAdvancedDunge' @ 72057594037927935 : 1 .. '!journal.pages!gngSpellListsXXX.gngReanimatorXX3' @ 0 : 0; will stop at (end)

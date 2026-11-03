@@ -1,0 +1,8 @@
+2026/11/03-01:03:33.514401 7f6740bfd6c0 Recovering log #44
+2026/11/03-01:03:33.817779 7f6740bfd6c0 Delete type=3 #42
+2026/11/03-01:03:33.817845 7f6740bfd6c0 Delete type=0 #44
+2026/11/03-01:28:37.146638 7f67293af6c0 Level-0 table #49: started
+2026/11/03-01:28:37.146666 7f67293af6c0 Level-0 table #49: 0 bytes OK
+2026/11/03-01:28:37.223836 7f67293af6c0 Delete type=0 #47
+2026/11/03-01:28:37.323537 7f67293af6c0 Manual compaction at level-0 from '!effects!dndAblazeXXXXXXX' @ 72057594037927935 : 1 .. '!folders!gngWondrousItems' @ 0 : 0; will stop at (end)
+2026/11/03-01:28:37.323604 7f67293af6c0 Manual compaction at level-1 from '!effects!dndAblazeXXXXXXX' @ 72057594037927935 : 1 .. '!folders!gngWondrousItems' @ 0 : 0; will stop at (end)
