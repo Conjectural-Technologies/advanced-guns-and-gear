@@ -4,11 +4,18 @@ const templateItems = {
   rare: "Compendium.advanced-guns-and-gear.items.Item.gngRareWondrous2"
 };
 
+function isPhysicalItemType(type) {
+  return Boolean(CONFIG.Item.dataModels[type]?.schema.fields.quantity);
+}
+
 async function createPlanData(sourceItem) {
   if ( !validatePlanItem(sourceItem) ) return;
-  const template = (await fromUuid(templateItems[sourceItem.system.rarity])).clone({}, { keepId: true });
+  const sourceTemplate = await fromUuid(templateItems[sourceItem.system.rarity]);
+  if ( !sourceTemplate ) throw new Error(`Advanced Guns & Gear | Missing schematic template for ${sourceItem.system.rarity}.`);
+  const template = sourceTemplate.clone({}, { keepId: true });
 
   const activity = template.system.activities.getByType("enchant")[0];
+  if ( !activity?.effects.length ) throw new Error(`Advanced Guns & Gear | Missing schematic enchantment for ${template.name}.`);
   const effects = activity.toObject().effects;
   const effect = await activity.effects[0].getEffect();
   if ( !effect ) throw new Error(`Advanced Guns & Gear | Missing schematic effect for ${template.name}.`);
@@ -31,12 +38,12 @@ async function createPlanData(sourceItem) {
 }
 
 function validatePlanItem(item) {
-  if ( !("quantity" in item.system) ) {
+  if ( !isPhysicalItemType(item.type) ) {
     ui.notifications.warn("AGG.InventorSchematic.Warning.Physical", { localize: true });
     return false;
   }
 
-  if ( (item.system.rarity === "common") || (item.system.rarity === "uncommon") || (item.system.rarity === "rare") ) {
+  if ( Object.hasOwn(templateItems, item.system.rarity) ) {
     if ( item.system.type?.value !== "wondrous" ) {
       ui.notifications.warn("AGG.InventorSchematic.Warning.Wondrous", { localize: true });
       return false;
@@ -95,7 +102,9 @@ async function _createPlanHandler(li) {
   const item = await fromUuid(this.collection.index.get(li.dataset.entryId).uuid);
   const createData = await createPlanData(item);
   if ( !createData ) return;
-  const destName = actor ? actor.name : game.i18n.localize('SIDEBAR.DirectoryTitle', {type: game.i18n.localize('DOCUMENT.Item')});
+  const destName = actor ? actor.name : game.i18n.format("SIDEBAR.DirectoryTitle", {
+    type: game.i18n.localize("DOCUMENT.Item")
+  });
   await Item.implementation.create(createData, { parent: actor });
   ui.notifications.success("AGG.InventorSchematic.Success", {
     localize: true,
@@ -111,8 +120,7 @@ function getItemContextOptions(application, menuItems) {
     callback: _createPlanHandler.bind(application),
     condition: li => {
       const item = application.collection.index.get(li.dataset.entryId);
-      const dataModel = CONFIG.Item.dataModels[item.type];
-      return "quantity" in (dataModel?.schema?.fields ?? {});
+      return isPhysicalItemType(item.type);
     }
   });
 }

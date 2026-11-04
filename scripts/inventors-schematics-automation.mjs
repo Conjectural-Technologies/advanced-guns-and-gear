@@ -3,8 +3,9 @@ import * as InventorsSchematics from "./inventors-schematics.mjs";
 Hooks.on("init", () => {
   InventorsSchematics.registerHooks();
 
-  CONFIG.DND5E.featureTypes.class.subtypes.inventorSchematic = "AGG.Feature.Class.InventorSchematic";
-  CONFIG.DND5E.featureTypes.enchantment.subtypes.inventorSchematic = "AGG.Feature.Class.InventorSchematic";
+  for (const type of ["class", "enchantment"]) {
+    CONFIG.DND5E.featureTypes[type].subtypes.inventorSchematic = "AGG.Feature.Class.InventorSchematic";
+  }
 
   game.settings.register("advanced-guns-and-gear", "lastVersion", {
     name: "AGG.SETTING.VERSION.name",
